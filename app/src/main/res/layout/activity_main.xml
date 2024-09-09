@@ -4,24 +4,29 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
     tools:context=".MainActivity">
 
     <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <RelativeLayout
+        <LinearLayout
+            android:id="@+id/mama_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#ffffff">
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/layout1"
+                android:id="@+id/child1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
+                    android:gravity="center"
                     android:id="@+id/reem_nigma"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -33,6 +38,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:gravity="center"
                     android:id="@+id/programming_developer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -41,7 +47,7 @@
                     android:layout_marginBottom="8dp"
                     android:text="Programming Developer"
                     android:textColor="#A37F2C"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -54,7 +60,8 @@
                     android:src="@drawable/reem_nigma_wight" />
 
                 <TextView
-                    android:id="@+id/discreptain"
+                    android:gravity="center"
+                    android:id="@+id/discreption"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -62,11 +69,12 @@
                     android:padding="5dp"
                     android:text="مصممة تطبيقات اندرويد"
                     android:textColor="#A37F2C"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/adresse"
+                    android:gravity="center"
+                    android:id="@+id/adress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -74,31 +82,32 @@
                     android:padding="5dp"
                     android:text="القاهرة"
                     android:textColor="#A37F2C"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:gravity="center"
                     android:id="@+id/hours"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="8dp"
                     android:padding="5dp"
-                    android:text="24 ساعة"
+                    android:text="20 ساعة"
                     android:textColor="#A37F2C"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/child2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/layout1"
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/layout2"
+                    android:id="@+id/lay1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -112,14 +121,15 @@
                         android:src="@drawable/phone_icon" />
 
                     <TextView
-                        android:id="@+id/no.tele"
+                        android:gravity="center_vertical"
+                        android:id="@+id/no_tele"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:layout_weight="4"
                         android:text="01064422023"
                         android:textColor="#A37F2C"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -131,19 +141,21 @@
                         android:src="@drawable/telegram" />
 
                     <TextView
-                        android:id="@+id/no.gram"
+                        android:gravity="center_vertical"
+                        android:id="@+id/no_gram"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:layout_weight="4"
                         android:text="01064422023"
                         android:textColor="#A37F2C"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lay2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -153,43 +165,45 @@
                         android:layout_width="0dp"
                         android:layout_height="35dp"
                         android:layout_margin="8dp"
-                        android:src="@drawable/whatsapp"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:src="@drawable/whatsapp" />
 
                     <TextView
-                        android:id="@+id/no.whats"
+                        android:gravity="center_vertical"
+                        android:id="@+id/no_whats"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
+                        android:layout_weight="4"
                         android:text="01064422023"
                         android:textColor="#A37F2C"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:layout_weight="4"/>
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/facebook"
                         android:layout_width="0dp"
                         android:layout_height="35dp"
                         android:layout_margin="8dp"
-                        android:src="@drawable/facebook"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:src="@drawable/facebook" />
 
                     <TextView
-                        android:id="@+id/name.face"
+                        android:gravity="center_vertical"
+                        android:id="@+id/face_name"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
+                        android:layout_weight="4"
                         android:text="Reem Hany Nigma"
                         android:textColor="#A37F2C"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:layout_weight="4"/>
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/layout3"
+                    android:id="@+id/lay3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -203,14 +217,15 @@
                         android:src="@drawable/instagram" />
 
                     <TextView
-                        android:id="@+id/name.insta"
+                        android:gravity="center_vertical"
+                        android:id="@+id/insta_name"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:layout_weight="4"
                         android:text="reemnigma"
                         android:textColor="#A37F2C"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -222,19 +237,20 @@
                         android:src="@drawable/linkedin" />
 
                     <TextView
-                        android:id="@+id/name.in"
+                        android:gravity="center_vertical"
+                        android:id="@+id/in_name"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
-                        android:layout_toRightOf="@+id/linkedin"
                         android:layout_weight="4"
                         android:text="reem nigma"
                         android:textColor="#A37F2C"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lay4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -244,44 +260,46 @@
                         android:layout_width="0dp"
                         android:layout_height="35dp"
                         android:layout_margin="8dp"
-                        android:src="@drawable/twitter"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:src="@drawable/twitter" />
 
                     <TextView
-                        android:id="@+id/name.x"
+                        android:gravity="center_vertical"
+                        android:id="@+id/x_name"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
+                        android:layout_weight="4"
                         android:text="reem nigma"
                         android:textColor="#A37F2C"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:layout_weight="4"/>
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/youtube"
                         android:layout_width="0dp"
                         android:layout_height="35dp"
                         android:layout_margin="8dp"
-                        android:src="@drawable/youtube"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:src="@drawable/youtube" />
 
                     <TextView
-                        android:id="@+id/name.tube"
+                        android:gravity="center_vertical"
+                        android:id="@+id/tube_name"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
+                        android:layout_weight="4"
                         android:text="Reem Nigma"
                         android:textColor="#A37F2C"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:layout_weight="4"/>
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </ScrollView>
 
